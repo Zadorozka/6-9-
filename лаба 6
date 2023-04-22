@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+float calculate_purchase_price(int quantity, float price_per_piece) {
+    float purchase_price = quantity * price_per_piece;
+    return purchase_price;
+}
+
+int main() {
+    int quantity;
+    float price_per_piece;
+
+    printf("Введіть кількість товару: ");
+    scanf("%d", &quantity);
+
+    printf("Введіть ціну за штуку товару: ");
+    scanf("%f", &price_per_piece);
+
+    float purchase_price = calculate_purchase_price(quantity, price_per_piece);
+
+    printf("Купівельна ціна %d одиниць продукту за $%.2f за штуку становить $%.2f.\n", quantity, price_per_piece, purchase_price);
+
+    return 0;
+}
